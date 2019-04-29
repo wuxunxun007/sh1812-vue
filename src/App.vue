@@ -1,7 +1,8 @@
 <template>
   <div class="container">
     <router-view></router-view>
-    <footer class="footer"></footer>
+    <!-- 命名视图 --- 多视图路由 -->
+    <router-view name="footer"></router-view>
   </div>
 </template>
 

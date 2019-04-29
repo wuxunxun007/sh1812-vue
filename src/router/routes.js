@@ -1,16 +1,21 @@
 export default [
   {
     path: '/',
-    redirect:'/home'
+    redirect: '/home'
   },
   {
     path: '/home',
     name: 'home',
-    component: () => import('@/views/home')
+    components: {
+      default: () => import('@/views/home'),
+      footer: () => import('@/components/common/Footer')
+    }
   },
   {
     path: '/kind',
     name: 'kind',
-    component: () => import('@/views/kind')
+    components: {
+      default: () => import('@/views/kind')
+    }
   }
 ]
