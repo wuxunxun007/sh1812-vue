@@ -28,6 +28,10 @@ export default {
       // prolist: state => state.home.prolist
       prolist: ({home}) => home.prolist
     })
+  },
+  mounted () {
+    this.$store.dispatch('getbannerlist')
+    this.$store.dispatch('getprolist')
   }
 }
 </script>

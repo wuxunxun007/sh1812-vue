@@ -29,19 +29,19 @@ axios.interceptors.response.use(function (response) {
 
 export default {
   getData (url) {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       axios.get(baseUrl + url)
-      .then(res => {
-        resolve(res.data)
-      })
+        .then(res => {
+          resolve(res.data)
+        })
     })
   },
   postData (url, params) {
-    new Promise((resolve, reject) => {
+    return new Promise((resolve, reject) => {
       axios.get(baseUrl + url, params)
-      .then(res => {
-        resolve(res.data)
-      })
+        .then(res => {
+          resolve(res.data)
+        })
     })
   }
 }
