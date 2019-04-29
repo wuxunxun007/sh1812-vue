@@ -9,6 +9,7 @@
           <mt-swipe-item>3</mt-swipe-item>
         </mt-swipe>
       </div>
+      {{ bannerlist }}
     </div>
   </div>
 </template>
@@ -16,9 +17,18 @@
 <script>
 import Vue from 'vue'
 import { Swipe, SwipeItem } from 'mint-ui'
+import { mapState } from 'vuex'
 Vue.use(Swipe, SwipeItem)
 export default {
-
+  computed: {
+    ...mapState({
+      bannerlist: (state) => {
+        return state.home.bannerlist
+      },
+      // prolist: state => state.home.prolist
+      prolist: ({home}) => home.prolist
+    })
+  }
 }
 </script>
 

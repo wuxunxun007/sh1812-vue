@@ -1,6 +1,6 @@
 export default {
   state: {
-    bannerlist: [],
+    bannerlist: [1, 2, 3, 4],
     prolist: []
   },
   getters: {
